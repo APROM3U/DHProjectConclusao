@@ -1,66 +1,42 @@
 <%- include('./partials/header') %>
   <main>
-    <div class="header">
-      <div class="logo">
-        <img src="images/top_vegan_logo.png"  />
-      </div><!--center-->
-    </div><!--header-->
-  
-    <div class="container-banner">
-      <div class="center">
-        <div class="form">
-          <h2>Preencha o formulário para finalizar seu cadastro!</h2>
-          <form>
-            <div class="input-container">
-              <span>Nome*</span>
-              <input type="text" name="nome" required />
-            </div><!--input-container-->
-  
-            <div class="input-container">
-              <span>E-mail*</span>
-              <input type="text" name="nome" required />
-            </div><!--input-container-->
-  
-            <div class="input-container">
-              <span>Telefone*</span>
-              <input type="text" name="nome" required />
-            </div><!--input-container-->
-  
-            <div class="input-container">
-              <span>CPF*</span>
-              <input type="text" name="nome" required />
-            </div><!--input-container-->
-  
-          </form>
-  
-          <form>
-            <p class="form2">>
-  
-            <div class="input-container">
-              <span>Endereço*</span>
-              <input type="text" name="nome" required />
-            </div><!--input-container-->
-  
-            <div class="input-container">
-              <span>Complemento</span>
-              <input type="text" name="nome" required />
-            </div><!--input-container-->
-  
-            <div class="input-container">
-              <span>CEP/Código Postal*</span>
-              <input type="text" name="nome" required />
-            </div><!--input-container-->
-  
-            <p class="warning">*Campos obrigatórios</p>
-  
-            <div class="input-submit-container">
-              <input type="submit" name="acao" value="Enviar">
-            </div><!--input-submit-container-->
-  
-          </p>
-          </form>
-        </div><!--form-->
-      </div><!--center-->
-    </div><!--container-banner-->
+    <h3 class="form_cad">Preencha o formulário para finalizar seu cadastro!</h3>
+    <form action="" method="POST">
+      <div class="painel_cadastro">
+        <div class="painel_dados">
+          <label for="nome">Nome</label><br>
+          <input type="text" name="nome" id="nome" required /><br>
+          <label for="email">E-mail</label><br>
+          <input type="text" name="email" id="email" required /><br>
+          <label for="telefone">Telefone</label><br>
+          <input type="text" name="telefone" id="telefone" required /><br>
+          <label for="cpf">CPF</label><br>
+          <input type="text" name="cpf" id="cpf" required /><br>
+        </div>
+        <div class="painel_endereco">
+          <label>CEP</label><br>
+          <input type="text" name="cep" id="cep" required /><br>
+          <label for="endereco">Endereço</label><br>
+          <input type="text" name="endereco" id="endereco" required /><br>
+          <label for="numero">Número</label><br>
+          <input type="number" name="numero" id="numero" required /><br>
+          <label for="complemento">Complemento</label><br>
+          <input type="text" name="complemento" id="complemento" /><br>
+          <label for="bairro">Bairro</label><br>
+          <input type="text" name="bairro" id="bairro" required /><br>
+          <label for="cidade">Cidade</label><br>
+          <input type="text" name="cidade" id="cidade" required /><br>
+          <label for="ponto_referencia">Ponto de Referência</label><br>
+          <textarea name="ponto_referencia" id="ponto_referencia" maxlength="300" /></textarea><br>
+        </div>
+      </div>
+
+      <div class="input-submit-container">
+        <button type="submit">Enviar</button>
+      </div>
+      <!--input-submit-container-->
+
+      </p>
+    </form>
   </main>
-<%- include('./partials/footer') %>
+  <%- include('./partials/footer') %>
