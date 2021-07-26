@@ -191,7 +191,58 @@ textarea {
   flex-wrap: wrap;
   justify-content: center;
 }
+/* quem somos */
 
+.container-qsomos {
+  width: 100%;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.qsomos-card {
+  width: 17rem;
+  height: auto;
+  padding: 1rem;
+  margin: 1rem;
+
+  background-color: var(--color-secondary);
+  border-radius: 0.35rem;
+  border-left: solid var(--color) 0.25rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  box-shadow: 0 1px 3px var(--color-shadow3), 0 1px 2px var(--color-shadow4);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  font-size: 12px;
+}
+
+.qsomosimg {
+  border-radius: 0.35rem;
+}
+.qsomosicons { 
+  display: flex;
+  flex-direction: column;
+}
+.qsomosicons img{
+  width:30px;
+  height:30px;
+  margin-right: 0.7rem;
+}
+.qsemail, .qsgit, .qslocal {
+  display: flex;
+  justify-content:flex-start;
+  align-items: center;
+  margin: 1rem 0 2rem 0;
+}
+
+.fi-rr-arrow-small-right{
+font-size: 16pt;
+margin: 1rem 0 0 0 
+}
 .menu-lateral {
   width: 9%;
   height: 100%;
@@ -218,6 +269,12 @@ textarea {
 /* --- Mouse --- */
 .stock-card:hover {
   font-size: x-large;
+  box-shadow: 0 14px 28px var(--color-shadow3), 0 10px 10px var( --color-shadow4);
+}
+.fi-rr-arrow-small-right:hover {
+  font-size: x-large;
+}
+.qsomos-card:hover{
   box-shadow: 0 14px 28px var(--color-shadow3), 0 10px 10px var( --color-shadow4);
 }
 
