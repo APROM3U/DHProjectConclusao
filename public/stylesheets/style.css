@@ -54,8 +54,8 @@ header {
 h1 {
   font-size: 2rem;
   color: var(--color);
-  padding: 1rem;
-  margin: 1rem;
+  padding: 1rem 1rem 0 1rem;
+  margin: 0 1rem 0 1rem;
 }
 
 h3 {
@@ -76,6 +76,113 @@ nav {
   color: var(--background-color);
 }
 
+/**** Caio ****/
+
+#menu {
+  box-sizing: border-box;
+  position: fixed;
+  left: 0;
+  top: 20%;
+  z-index: 30;
+}
+
+.navigation {
+  position: relative;
+  height: 25rem;
+  width: 4.375rem;
+  background: var(--color-rodape);
+  box-shadow: 0.625rem 0 0 var(--color-footer);
+  border-left: 0.625rem solid var(--color-rodape);
+  overflow-x: hidden;
+  transition: width 0.5s;
+  border-bottom-right-radius: 0.3125rem;
+  border-top-right-radius: 0.3125rem;
+}
+
+.navigation:hover {
+  width: 18.75rem;
+}
+
+.navigation ul {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-left: 0.3125rem;
+  padding-top: 2.5rem;
+}
+
+.navigation ul li {
+  position: relative;
+  list-style: none;
+  width: 100%;
+  border-top-left-radius: 1.25rem;
+  border-bottom-left-radius: 1.25rem;
+}
+
+.navigation ul li.active {
+  background: var(--color-footer);
+}
+
+.navigation ul li a {
+  position: relative;
+  display: block;
+  width: 100%;
+  display: flex;
+  text-decoration: none;
+  color: var(--color-secondary);
+}
+
+.navigation ul li.active a::before {
+  content: "";
+  position: absolute;
+  top: -1.875rem;
+  right: 0;
+  width: 1.875rem;
+  height: 1.875rem;
+  background: var(--color-rodape);
+  border-radius: 50%;
+  box-shadow: 0.9375rem 0.9375rem 0 var(--color-footer);
+}
+
+.navigation ul li.active a::after {
+  content: "";
+  position: absolute;
+  bottom: -1.875rem;
+  right: 0;
+  width: 1.875rem;
+  height: 1.875rem;
+  background: var(--color-rodape);
+  border-radius: 50%;
+  box-shadow: 0.9375rem -0.9375rem 0 var(--color-footer);
+}
+
+.navigation ul li a .icon {
+  position: relative;
+  display: block;
+  min-width: 3.75rem;
+  height: 3.75rem;
+  line-height: 4.375rem;
+  text-align: center;
+}
+
+.navigation ul li a .icon ion-icon {
+  position: relative;
+  font-size: 1.5em;
+  z-index: 1;
+}
+
+.navigation ul li a .title {
+  position: relative;
+  display: block;
+  padding-left: 0.625rem;
+  height: 3.75rem;
+  line-height: 3.75rem;
+  white-space: nowrap;
+}
+
+/**** Fim Caio ****/
+
 /**** Giovanna ****/
 @font-face{
 	src:url('../fonts/OpenSans-Light.ttf');
@@ -83,8 +190,8 @@ nav {
 }
 
 .container img {
-  max-width:200px;
-  max-height:150px;
+  max-width:12.5rem;
+  max-height:9.375rem;
   width: auto;
   height: auto;
 }
@@ -96,16 +203,16 @@ nav {
 
 .form input[type=submit] {
   color: white;
-  font-size: 25px;
-  width: 280px;
-  height: 56px;
+  font-size: 1.5625rem;
+  width: 17.5rem;
+  height: 3.5rem;
   display: inline-block;
   background-color: #90EE90;
   border-top:0;
   border-right: 0;
   border-left: 0;
   cursor: pointer;
-  border-bottom: 5px solid #90EE90;
+  border-bottom: 0.3125rem solid #90EE90;
 }
 
 .form input[type=submit]:hover {
@@ -195,7 +302,7 @@ textarea {
 
 .container-qsomos {
   width: 100%;
-  padding: 1.5rem;
+  /* padding: 1.5rem; */
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -282,6 +389,13 @@ margin: 1rem 0 0 0
 button {
   border-radius: 0.625rem;
   cursor: pointer;
+  width: 6.25rem;
+  height: 3.125rem;
+}
+
+button:hover{
+  background-color: var(--color-footer);
+  box-shadow: 0 14px 28px var(--color-shadow3), 0 10px 10px var( --color-shadow4)
 }
 
 /* --- Footer --- */
